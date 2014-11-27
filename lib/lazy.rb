@@ -74,10 +74,10 @@ if RUBY_PLATFORM == 'java'
         to_drop = true
         Lazy.new(self) do |yielder, *vals|
           if to_drop
-            to_drop = false if yield(*vals)
+            to_drop = false unless yield(*vals)
           end
 
-          if !to_drop
+          unless to_drop
             yielder.yield(*vals)
           end
         end

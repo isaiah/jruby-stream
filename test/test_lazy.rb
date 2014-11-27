@@ -1,5 +1,6 @@
+$:.unshift(File.expand_path("../../lib", __FILE__))
 require 'minitest/autorun'
-require './lazy'
+require 'lazy'
 
 class TestLazyEnumerator < MiniTest::Unit::TestCase
   def setup
